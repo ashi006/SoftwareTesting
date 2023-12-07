@@ -23,7 +23,7 @@ describe('isDate', function() {
     });
       
     it('should return false if value is an object', function() {
-    expect(isDate({})).to.be.false;
+        expect(isDate({})).to.be.false;
     });
 
     it('Should return false if value is not a date', function() {

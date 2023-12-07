@@ -23,10 +23,10 @@ describe('Equals', function() {
         expect(eq(5.5, 5)).to.be.false;
     });
 
-    /*('Should return false when comparing a primitive with its object wrapper', function() {
+    ('Should return false when comparing a primitive with its object wrapper', function() {
         expect(eq('a', new String('a'))).to.be.false;
         expect(eq(5, new Number(5))).to.be.false;
-    });*/
+    });
 
     it('Should return true when comparing NaN to NaN', function() {
         expect(eq(NaN, NaN)).to.be.true;
@@ -41,10 +41,10 @@ describe('Equals', function() {
         expect(eq(10, NaN)).to.be.false
     });
     
-    /*it('Should return false for values of different types', function() {
+    it('Should return false for values of different types', function() {
         expect(eq(1, '1')).to.be.false;
         expect(eq(true, 'true')).to.be.false;
-    });*/
+    });
 
     it('Should return true for equal boolean values', function() {
         expect(eq(true, true)).to.be.true;

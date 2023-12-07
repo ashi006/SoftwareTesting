@@ -26,9 +26,9 @@ describe('Add', function() {
         expect(1.5).to.equal(add(-2, 3.5));
     });
 
-    /*it('should handle non-numeric inputs by returning NaN', function() {
+    it('should handle non-numeric inputs by returning NaN', function() {
         expect(add('a', 'b')).to.be.NaN;
-    });*/
+    });
 
     it('Should return correct sum when adding undefined and positive integer', function() {
         expect(5).to.equal(add(undefined, 5));

@@ -18,9 +18,9 @@ describe('upperFirst', function() {
         expect(upperFirst('')).to.equal('');
     });
 
-    /*it('Should convert the first non-whitespace character to uppercase', function() {
+    it('Should convert the first non-whitespace character to uppercase', function() {
         expect(upperFirst(' fred')).to.equal(' Fred');
-    });*/
+    });
 
     it('Should leave the string unchanged if it starts with a number or special character', function() {
         expect(upperFirst('123abc')).to.equal('123abc');
@@ -35,7 +35,7 @@ describe('upperFirst', function() {
     it('Should return an empty string for non-string inputs', function() {
         expect(upperFirst(null)).to.equal('');
         expect(upperFirst(undefined)).to.equal('');
-        //expect(upperFirst(123)).to.equal('');
-        //expect(upperFirst({})).to.equal('');
+        expect(upperFirst(123)).to.equal('');
+        expect(upperFirst({})).to.equal('');
     });
 });

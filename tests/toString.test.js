@@ -2,10 +2,10 @@ import {expect} from 'chai';
 import toString from '../src/toString.js';
 
 describe('toString', function() {
-    /*it('Should return an empty string for null and undefined', function() {
+    it('Should return an empty string for null and undefined', function() {
         expect(toString(null)).to.equal('');
         expect(toString(undefined)).to.equal('');
-    });*/
+    });
 
     it('Should preserve the sign of -0', function() {
         expect(toString(-0)).to.equal('-0');
