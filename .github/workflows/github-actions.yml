@@ -16,11 +16,18 @@ jobs:
         - name: Install dependencies 
           run: npm ci
         - name: Run tests
-          continue-on-error: true
           run: npm test
         - name: Make test coverage
           run: npm run coverage
         - name: Coveralls 
-          uses: coverallsapp/github-action@v2.2.3
+          uses: coverallsapp/github-actionmaster
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
+    finish:
+      needs: run-tests
+      runs-on: ubuntu-latest
+      steps:
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }} 
