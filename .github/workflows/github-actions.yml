@@ -20,7 +20,7 @@ jobs:
         - name: Make test coverage
           run: npm run coverage
         - name: Coveralls 
-          uses: coverallsapp/github-actionmaster
+          uses: coverallsapp/github-action@v2.2.3
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
     finish:
@@ -28,6 +28,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Coveralls
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@v2.2.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} 
